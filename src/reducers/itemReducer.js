@@ -3,7 +3,7 @@ import {
     CLICK_CHANGE,
 } from '../actions/actionTypes';
 
-const INITIAL_STATE = { item: '', flag: true };
+const INITIAL_STATE = { item: '', itemInLabel: '', flag: true };
 
 export default function (state = INITIAL_STATE, action) {
     switch (action.type) {

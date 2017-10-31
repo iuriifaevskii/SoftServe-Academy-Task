@@ -14,7 +14,7 @@ class ButtonComponent extends Component {
     render() {
         return (
             <button
-                disabled={this.props.flag}
+                disabled={this.props.isActive}
                 onClick={this.onClick}
                 className="btn btn-success"
             >
@@ -26,7 +26,7 @@ class ButtonComponent extends Component {
 
 ButtonComponent.PropTypes = {
     clickChange: PropTypes.func,
-    flag: PropTypes.bool,
+    isActive: PropTypes.bool,
     item: PropTypes.string,
 };
 
@@ -34,7 +34,7 @@ ButtonComponent.PropTypes = {
 function mapStateToProps(state) {
     return {
         item: state.elements.item,
-        flag: state.elements.flag,
+        isActive: state.elements.isMoreThenFive,
     };
 }
 

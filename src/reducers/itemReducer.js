@@ -3,14 +3,13 @@ import {
     CLICK_CHANGE,
 } from '../actions/actionTypes';
 
-const INITIAL_STATE = { item: '', itemInLabel: '', flag: true };
+const INITIAL_STATE = { item: '', itemInLabel: '', isMoreThenFive: true };
 
 export default function (state = INITIAL_STATE, action) {
     switch (action.type) {
     case INPUT_CHANGE:
-        return { ...state, item: action.payload.item, itemInLabel: action.payload.itemInLabel, flag: action.payload.flag };
     case CLICK_CHANGE:
-        return { ...state, item: action.payload.item, itemInLabel: action.payload.itemInLabel, flag: action.payload.flag };
+        return { ...state, item: action.payload.item, itemInLabel: action.payload.itemInLabel, isMoreThenFive: action.payload.isMoreThenFive };
     default:
         return state;
     }
